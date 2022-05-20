@@ -4,6 +4,7 @@ $blue: #1CA5E3;
 $lightBlue: #82D0F4;
 $bg-blue: #D9EEF7;
 $bg-lightBlue: #EBF7FB;
+$bg-downList: #1698d3;
 $orange: #fac03d;
 $gray: #707070;
 $white: #fff;
@@ -59,8 +60,13 @@ body {
 }
 
 .header {
-  position: relative;
+  position: fixed;
+  width: 100%;
   height: 60px;
+  top: 0;
+  left: 0;
+  background-color: $white;
+  z-index: 5;
 
   &__logo {
     position: absolute;
@@ -84,9 +90,9 @@ body {
     &__line {
       position: absolute;
       background-color: $blue;
-      height: 3px;
+      height: 2px;
       width: 100%;
-      transition: 1s;
+      transition: .3s;
     }
   
     .line2 {
@@ -98,25 +104,89 @@ body {
       bottom: 0;
     }
     
-    .line_1,
-    .line_2,
-    .line_3 {
-      background-color: $blue;
-    }
-    
     .line_1 {
-      width: 60%;
-      transform: translateY(5px) rotate(-45deg);
+      transform: translateY(9px) rotate(45deg);
+    }
+    
+    .line_2 {
+      opacity: 0;
     }
     
     .line_3 {
-      width: 60%;
-      transform: translateY(-5px) rotate(45deg);
+      transform: translateY(-9px) rotate(-45deg);
     }
   }
 
   .nav {
-    display: none;
+    position: fixed;
+    width: 100vw;
+    height: calc(100vh - 60px);
+    padding: 65px 0 70px;
+    top: 60px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 5;
+    color: $white;
+    background-color: $blue;
+    font-size: 18px;
+    overflow: scroll;
+    transform: translateX(100%);
+    transition: .3s;
+
+    &__list {
+      width: 276px;
+      margin: 0 auto;
+    }
+    
+    &__item {
+      border-bottom: 1px solid $lightBlue;
+
+      & > a,
+      & > p {
+        display: block;
+        position: relative;
+        padding: 35px 0 20px;
+        cursor: pointer;
+      }
+
+      &.accordion > .nav__text::after {
+        content: "";
+        position: absolute;
+        width: 7px;
+        height: 10px;
+        top: 50%;
+        right: 15.5px;
+        background: url(../../common/img/top/arrow.png) no-repeat center center/contain;
+        transform: translateY(-50%) rotate(90deg);
+        transition: .3s;
+      }
+
+      &.close > .nav__text::after {
+        transform: rotate(-90deg);
+      }
+    }
+
+    &.active {
+      transform: translate(0);
+    }
+
+    &__down {
+      display: none;
+      padding: 0 20px 30px;
+      background-color: $bg-downList;
+    }
+
+    &__downItem {
+      width: 100%;
+      font-size: 16px;
+      border-bottom: 1px solid $lightBlue;
+
+      a {
+        display: block;
+        padding: 25px 0 12.5px 20px;
+      }
+    }
   }
 }
 
