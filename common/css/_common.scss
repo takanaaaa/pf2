@@ -7,6 +7,8 @@ $bg-lightBlue: #EBF7FB;
 $bg-downList: #1698d3;
 $orange: #fac03d;
 $gray: #707070;
+$lightGray: #838383;
+$boxLine: #CDD6DD;
 $white: #fff;
 $shadow: 0 5px 10px 0 #00000026;
 
@@ -15,7 +17,7 @@ $shadow: 0 5px 10px 0 #00000026;
   width: 24px;
   height: 16px;
   margin: 0 auto;
-  background: url(../../common/img/top/subTtl-icon.png) no-repeat center center/contain;
+  background: url(../../common/img/subTtl-icon.png) no-repeat center center/contain;
 }
 
 %subTtl-style {
@@ -45,11 +47,22 @@ $shadow: 0 5px 10px 0 #00000026;
     top: 50%;
     right: 15.5px;
     transform: translateY(-50%);
-    background: url(../../common/img/top/arrow.png) no-repeat center center/contain;
+    background: url(../../common/img/arrow.png) no-repeat center center/contain;
   }
 
   &:hover {
     opacity: .5;
+  }
+}
+
+%price-style {
+  display: inline-block;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  border-bottom: 2px dotted $orange;
+
+  & span {
+    font-size: 8vw;
   }
 }
 
@@ -157,7 +170,7 @@ body {
         height: 10px;
         top: 50%;
         right: 15.5px;
-        background: url(../../common/img/top/arrow.png) no-repeat center center/contain;
+        background: url(../../common/img/arrow.png) no-repeat center center/contain;
         transform: translateY(-50%) rotate(90deg);
         transition: .3s;
       }
@@ -313,7 +326,7 @@ body {
         top: 50%;
         left: 20px;
         transform: translateY(-50%);
-        background: url(../../common/img/top/arrow-b.png) no-repeat center center/contain;
+        background: url(../../common/img/arrow-b.png) no-repeat center center/contain;
       }
     }
 

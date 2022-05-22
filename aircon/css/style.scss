@@ -1,0 +1,321 @@
+@charset "UTF-8";
+@import "../../common/css/_common.scss";
+
+%warning-style {
+  color: $lightGray;
+  font-size: 12px;
+  font-weight: 500;
+  padding-left:1em;
+	text-indent:-1em;
+  text-align: left;
+}
+
+.aircon {
+  padding-top: 60px;
+
+  &__heading {
+    position: relative;
+    width: 100%;
+    height: 132px;
+    padding: 25px 0;
+    background: url(../../common/img/aircon/airconType-img01.png) no-repeat center center/cover;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      background-color: #0006
+    }
+  }
+
+  &__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 2;
+  }
+
+  &__icon {
+    @extend %icon-style;
+    margin-bottom: 3px;
+  }
+
+  &__subTtl {
+    margin-bottom: 1em;
+    color: $white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+  }
+
+  &__ttl {
+    color: $white;
+    font-size: 22px;
+  }
+
+  .airconType {
+    padding: 60px 0 135px;
+
+    &__boxes {
+      width: 335px;
+      margin: 0 auto 65px;
+    }
+
+    &__box {
+      border: 1px solid $boxLine;
+      text-align: center;
+    }
+
+    &__content {
+      padding: 25px 30px 30px;
+    }
+
+    &__ttl {
+      margin-bottom: 5px;
+      color: $blue;
+      font-size: 20px;
+      line-height: 1.5
+    }
+
+    &__price {
+      @extend %price-style;
+      margin-bottom: 20px;
+    }
+
+    &__detail {
+      width: 275px;
+      margin: 0 auto;
+      text-align: left;
+
+      table {
+        margin-bottom: 10px;
+
+        th {
+          color: $blue;
+        }
+
+        td {
+          padding: 5px 0;
+          font-weight: 500;
+        }
+
+        th,
+        td {
+          display: block;
+          font-size: 14px;
+        }
+      }
+    }
+
+    &__warning {
+      @extend %warning-style;
+    }
+
+    .airconClean {
+      width: 335px;
+      margin: 0 auto;
+      text-align: center;
+  
+      &__bubble {
+        position: relative;
+        margin-bottom: 10px;
+        font-size: 15px;
+        line-height: 1.2;
+  
+        span {
+          color: $blue;
+        }
+  
+        &::before,
+        &::after {
+          content: "";
+          position: absolute;
+          width: 55px;
+          height: 35px;
+          top: 0;
+          border-bottom: 1.5px dashed;
+        }
+        
+        &::before {
+          transform: rotate(60deg);
+          left: 3px;
+        }
+    
+        &::after {
+          transform: rotate(-60deg);
+          right: 3px;
+        }
+      }
+  
+      &__container {
+        padding: 40px 30px 50px;
+        background-color: $bg-lightBlue;
+      }
+
+      &__icon {
+        display: block;
+        width: 33px;
+        height: 33px;
+        margin: 0 auto;
+        background: url(../../common/img/aircon/airconClean-icon.png) no-repeat center center/contain;
+      }
+
+      &__ttl {
+        margin-bottom: 25px;
+        color: $blue;
+        font-size: 22px;
+      }
+
+      &__box:not(:last-of-type){
+        margin-bottom: 40px;
+      }
+
+      &__text {
+        margin-top: 20px;
+        font-size: 14px;
+        font-weight: 500;
+        text-align: left;
+
+        &::before {
+          content: "\02022";
+        }
+      }
+    }
+  }
+
+  .flow {
+    padding: 43px 0 70px;
+    background-color: $bg-lightBlue;
+    text-align: center;
+    
+    &__icon {
+      @extend %icon-style;
+      margin-bottom: 3px;
+    }
+  
+    &__subTtl {
+      @extend %subTtl-style;
+    }
+  
+    &__ttl {
+      margin-bottom: 76px;
+      font-size: 22px;
+    }
+
+    &__boxes {
+      position: relative;
+      width: 335px;
+      margin: 0 auto;
+      z-index: 1;
+
+      .flowBox {
+        position: relative;
+        margin-bottom: 115px;
+        background-color: $white;
+
+        &::before {
+          position: absolute;
+          width: 92px;
+          height: 92px;
+          padding-top: 10px;
+          top: -46px;
+          left: 50%;
+          color: $white;
+          background-color: $blue;
+          font-size: 24PX;
+          border-radius: 50%;
+          transform: translateX(-50%);
+          z-index: -1;
+        }
+
+        &.box1::before {
+          content: "1";
+        }
+
+        &.box2::before {
+          content: "2";
+        }
+
+        &.box3::before {
+          content: "3";
+        }
+        
+        &.box4::before {
+          content: "4";
+        }
+
+        &.box5::before {
+          content: "5";
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          width: 45px;
+          height: 40px;
+          bottom: -60px;
+          left: 50%;
+          transform: translateX(-50%);
+          background: url(../../common/img/aircon/flowBox-triangle.png) no-repeat center center/contain;
+        }
+
+        &.box5::after {
+          display: none;
+        }
+
+        &__content {
+          padding: 25px 30px 30px;
+          text-align: left;
+          line-height: 1.7;
+        }
+
+        &__ttl {
+          margin-bottom: 15px;
+          color: $blue;
+          font-size: 20px;
+          text-align: center;
+        }
+
+        &__text {
+          font-size: 14px;
+          font-weight: 500;
+
+          &:not(:last-of-type) {
+            margin-bottom: 5px;
+          }
+        }
+
+        &__list {
+          margin-bottom: 5px;
+
+          li {
+            font-size: 12px;
+            font-weight: 500;
+  
+            &::before {
+              content: "\02022";
+              color: $blue;
+            }
+          }
+        }
+
+        &__warning {
+          @extend %warning-style;
+        }
+      }
+    }
+
+    &__warning {
+      @extend %warning-style;
+      display: inline-block;
+      width: 335px;
+      text-align: left;
+    }
+  }
+}
+
