@@ -359,6 +359,7 @@ body {
 
 .company {
   padding-top: 60px;
+  background-image: url(../../common/img/bg.png);
 }
 
 .company__heading {
@@ -412,6 +413,7 @@ body {
   margin: 0 auto;
   padding-top: 60px;
   font-size: 14px;
+  line-height: 1.8;
 }
 
 .company .table__line {
