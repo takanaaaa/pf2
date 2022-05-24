@@ -1,0 +1,553 @@
+.value__icon, .news__icon, .contact__icon {
+  display: block;
+  width: 24px;
+  height: 16px;
+  margin: 0 auto;
+  background: url(../../common/img/subTtl-icon.png) no-repeat center center/contain;
+}
+
+.value__subTtl, .news__subTtl {
+  margin-bottom: 15px;
+  color: #1CA5E3;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.news__btn, .contact .send__button {
+  position: relative;
+  width: 275px;
+  padding: 18px 0;
+  color: #fff;
+  background-color: #1CA5E3;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 5px 10px 0 #00000026;
+          box-shadow: 0 5px 10px 0 #00000026;
+  font-size: 14px;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.news__btn p::after, .contact .send__button p::after {
+  content: "";
+  position: absolute;
+  width: 7px;
+  height: 10px;
+  top: 50%;
+  right: 15.5px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background: url(../../common/img/arrow.png) no-repeat center center/contain;
+}
+
+.news__btn:hover, .contact .send__button:hover {
+  opacity: .5;
+}
+
+body {
+  max-width: 375px;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: bold;
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  height: 60px;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  z-index: 5;
+}
+
+.header__logo {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 20px;
+  width: 132px;
+  height: 30px;
+  background: url(../../common/img/header-logo.png) no-repeat center left/contain;
+}
+
+.header .hamburger {
+  position: absolute;
+  width: 30px;
+  height: 20px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: 20px;
+  cursor: pointer;
+}
+
+.header .hamburger__line {
+  position: absolute;
+  background-color: #1CA5E3;
+  height: 2px;
+  width: 100%;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.header .hamburger .line2 {
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.header .hamburger .line3 {
+  bottom: 0;
+}
+
+.header .hamburger .line_1 {
+  -webkit-transform: translateY(9px) rotate(45deg);
+          transform: translateY(9px) rotate(45deg);
+}
+
+.header .hamburger .line_2 {
+  opacity: 0;
+}
+
+.header .hamburger .line_3 {
+  -webkit-transform: translateY(-9px) rotate(-45deg);
+          transform: translateY(-9px) rotate(-45deg);
+}
+
+.header .nav {
+  position: fixed;
+  width: 100vw;
+  height: calc(100vh - 60px);
+  padding: 65px 0 70px;
+  top: 60px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
+  color: #fff;
+  background-color: #1CA5E3;
+  font-size: 18px;
+  overflow: scroll;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.header .nav__list {
+  width: 276px;
+  margin: 0 auto;
+}
+
+.header .nav__item {
+  border-bottom: 1px solid #82D0F4;
+}
+
+.header .nav__item > a,
+.header .nav__item > p {
+  display: block;
+  position: relative;
+  padding: 35px 0 20px;
+  cursor: pointer;
+}
+
+.header .nav__item.accordion > .nav__text::after {
+  content: "";
+  position: absolute;
+  width: 7px;
+  height: 10px;
+  top: 50%;
+  right: 15.5px;
+  background: url(../../common/img/arrow.png) no-repeat center center/contain;
+  -webkit-transform: translateY(-50%) rotate(90deg);
+          transform: translateY(-50%) rotate(90deg);
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.header .nav__item.close > .nav__text::after {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+.header .nav.active {
+  -webkit-transform: translate(0);
+          transform: translate(0);
+}
+
+.header .nav__down {
+  display: none;
+  padding: 0 20px 30px;
+  background-color: #1698d3;
+}
+
+.header .nav__downItem {
+  width: 100%;
+  font-size: 16px;
+  border-bottom: 1px solid #82D0F4;
+}
+
+.header .nav__downItem a {
+  display: block;
+  padding: 25px 0 12.5px 20px;
+}
+
+.value {
+  padding: 55px 0 66px;
+  text-align: center;
+}
+
+.value__ttl {
+  margin-bottom: 35px;
+  font-size: 22px;
+}
+
+.value .gvMenu {
+  width: 335px;
+  margin: 0 auto;
+}
+
+.value .gvMenu__item {
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.value .gvMenu__item a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 5px 10px 0 #00000026;
+          box-shadow: 0 5px 10px 0 #00000026;
+}
+
+.value .gvMenu__item:not(:last-of-type) {
+  margin-bottom: 30px;
+}
+
+.value .gvMenu__item:hover {
+  opacity: .5;
+}
+
+.value .gvMenu__text {
+  width: 100%;
+  padding: 20px 14px;
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+.value .gvMenu__text small {
+  display: block;
+  color: #1CA5E3;
+  font-size: 12px;
+}
+
+.news {
+  padding-bottom: 100px;
+  text-align: center;
+}
+
+.news__ttl {
+  margin-bottom: 35px;
+  font-size: 22px;
+}
+
+.news__list {
+  width: 335px;
+  margin: 0 auto 25px;
+  text-align-last: left;
+}
+
+.news__item {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #cdd6dd;
+}
+
+.news__item:not(:first-of-type) {
+  padding-top: 20px;
+}
+
+.news__date {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+}
+
+.news__text {
+  font-size: 14px;
+}
+
+.footMenu {
+  text-align: center;
+}
+
+.footMenu__item {
+  position: relative;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.footMenu__item a {
+  display: block;
+  padding: 35px 0;
+  color: #1CA5E3;
+}
+
+.footMenu__item a::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 13px;
+  top: 50%;
+  left: 20px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background: url(../../common/img/arrow-b.png) no-repeat center center/contain;
+}
+
+.footMenu__item:hover {
+  opacity: .5;
+}
+
+.footMenu__item:nth-of-type(odd) {
+  background-color: #D9EEF7;
+}
+
+.footMenu__item:nth-of-type(even) {
+  background-color: #EBF7FB;
+}
+
+.footer {
+  text-align: center;
+  font-weight: 500;
+}
+
+.footer__main {
+  padding: 50px 84px 40px;
+  background: url(../../common/img/footer-bg.png) no-repeat center center/cover;
+}
+
+.footer__logo {
+  width: 207px;
+  height: 47px;
+  margin-bottom: 25px;
+  background: url(../../common/img/footer-logo.png) no-repeat center left/contain;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.footer__logo:hover {
+  opacity: .5;
+}
+
+.footer__info {
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+  line-height: 1.7;
+}
+
+.footer__copy {
+  padding: 22px 0 17px;
+  background-color: #EBF7FB;
+  font-size: 12px;
+}
+
+.contact {
+  padding-top: 60px;
+}
+
+.contact label[for] {
+  cursor: default;
+}
+
+.contact__heading {
+  position: relative;
+  width: 100%;
+  height: 132px;
+  padding: 25px 0;
+  background: url(../../common/img/contact/contact-img.png) no-repeat center center/cover;
+}
+
+.contact__heading::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: #0006;
+}
+
+.contact__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 2;
+}
+
+.contact__icon {
+  margin-bottom: 3px;
+}
+
+.contact__subTtl {
+  margin-bottom: 1em;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.contact__ttl {
+  color: #fff;
+  font-size: 22px;
+}
+
+.contact__text {
+  margin: 60px 0 40px;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  line-height: 1.8;
+}
+
+.contact .list {
+  width: 335px;
+  margin: 0 auto 30px;
+}
+
+.contact .list__item {
+  padding: 34px 0 30px;
+  font-size: 14px;
+  border-bottom: 1px solid #838383;
+}
+
+.contact .list__item:first-of-type {
+  border-top: 1px solid #838383;
+}
+
+.contact .list__box {
+  width: 295px;
+  margin: 0 auto;
+}
+
+.contact .list__box span {
+  margin-left: 10px;
+  padding: 4px 9px;
+  color: #fff;
+  background-color: #C71D16;
+  font-size: 13px;
+  border-radius: 5px;
+}
+
+.contact .list__box input {
+  width: 100%;
+  margin-top: 12px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #838383;
+}
+
+.contact .list__box select {
+  margin-top: 15px;
+  padding: 14px 63px 12px 13px;
+  background-color: #1CA5E3;
+  color: #fff;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.contact .list__box textarea {
+  margin-top: 12px;
+  padding: 10px;
+  width: 100%;
+  height: 120px;
+  border-radius: 10px;
+  border: 1px solid #838383;
+}
+
+.contact .list__box.address label {
+  display: block;
+}
+
+.contact .list__box.address input:first-of-type {
+  width: 150px;
+  margin-left: 10px;
+}
+
+.contact .list__box.address input:nth-of-type(2) {
+  height: 60px;
+}
+
+.contact .list__prefecture {
+  display: inline-block;
+  position: relative;
+}
+
+.contact .list__prefecture::after {
+  content: "";
+  position: absolute;
+  width: 7px;
+  height: 10px;
+  top: calc(50% + 10px);
+  right: 15px;
+  background: url(../../common/img/arrow.png) no-repeat center center/contain;
+  -webkit-transform: translateY(-50%) rotate(90deg);
+          transform: translateY(-50%) rotate(90deg);
+}
+
+.contact .privacy {
+  width: 298px;
+  margin: 0 auto 50px;
+}
+
+.contact .privacy input[type=checkbox] {
+  display: none;
+}
+
+.contact .privacy__label {
+  display: inline-block;
+  position: relative;
+  font-size: 14px;
+  line-height: 40px;
+}
+
+.contact .privacy__label::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #838383;
+  border-radius: 10px;
+}
+
+.contact .privacy__label a {
+  display: inline-block;
+  position: relative;
+  margin: 0 10px 0 48px;
+}
+
+.contact .privacy__label a::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background: url(../../common/img/contact/privacy-icon.png) no-repeat center center/contain;
+}
+
+.contact .send {
+  text-align: center;
+}
+/*# sourceMappingURL=style.css.map */
