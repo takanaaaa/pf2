@@ -379,6 +379,7 @@ body {
 
 .aircon {
   padding-top: 60px;
+  background-image: url(../../common/img/bg.png);
 }
 
 .aircon__heading {
@@ -437,7 +438,12 @@ body {
 
 .aircon .airconType__box {
   border: 1px solid #CDD6DD;
+  border-radius: 10px;
   text-align: center;
+}
+
+.aircon .airconType__box:not(:last-of-type) {
+  margin-bottom: 40px;
 }
 
 .aircon .airconType__content {
