@@ -12,6 +12,7 @@
 
 .aircon {
   padding-top: 60px;
+  background-image: url(../../common/img/bg.png);
 
   &__heading {
     position: relative;
@@ -68,7 +69,12 @@
 
     &__box {
       border: 1px solid $boxLine;
+      border-radius: 10px;
       text-align: center;
+
+      &:not(:last-of-type) {
+        margin-bottom: 40px;
+      }
     }
 
     &__content {
